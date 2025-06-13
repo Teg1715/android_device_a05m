@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
+# VINTF Metadata
+ODM_VINTF_FRAGMENTS += \
+    vendor/samsung/a05m/proprietary/odm/etc/vintf/manifest_dsds.xml
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
