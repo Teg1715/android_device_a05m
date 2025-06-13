@@ -21,10 +21,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
-# VINTF Metadata
-ODM_VINTF_FRAGMENTS += \
-    vendor/samsung/a05m/proprietary/odm/etc/vintf/manifest_dsds.xml
-
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -65,6 +61,11 @@ PRODUCT_PACKAGES += \
     multi_init.rc \
     init.recovery.mt6768.rc \
     init.recovery.samsung.rc \
+
+# VINTF Metadata
+ODM_MANIFEST_FILES += \
+    vendor/samsung/a05m/proprietary/odm/etc/vintf/manifest_dsds.xml \
+    vendor/samsung/a05m/proprietary/odm/etc/vintf/manifest_qsqs.xml \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus
